@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+$main-font: "Inter", sans-serif;
+$header-color: #a200ff;
+body {
+  background-image: linear-gradient(to right, #0051ffd6, #9f87ffc9);
+  font-family: $main-font;
+}
+.container {
+  max-width: 920px;
+  margin: auto;
+  position: relative;
+}
+input {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  font-weight: 700;
+  font-size: 21px;
+}
+.d-none {
+  display: none;
+}
+.fade-totop {
+  animation-name: fadeAlert;
+  transition: 0.4s;
+  animation-duration: 1s;
+}
+.List-Form {
+  margin: 40px auto;
+  padding: 40px;
+
+  .form-control {
+    height: 45px;
+    width: 85%;
+  }
+  .btn {
+    width: 13%;
+  }
+}
+.header,
+.taskheader {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $header-color;
+}
+.taskheader {
+  color: white;
+}
+.alert {
+  position: fixed;
+  width: 456px;
+  bottom: 0px;
+  right: 26px;
+}
+.Tasks,
+.List-Form {
+  background-color: white;
+  border-radius: 13px;
+}
+.Tasks {
+  padding: 1px 20px;
+  transition: 0.4s;
+  .completed-Task {
+    cursor: no-drop !important;
+    background-image: linear-gradient(
+      to right,
+      rgb(0 52 169 / 84%),
+      rgb(106 91 166)
+    ) !important;
+  }
+  .task {
+    background-image: linear-gradient(to right, #0051ffd6, #9f87ffc9);
+    color: white;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 19px;
+    font-weight: 600;
+    flex-wrap: wrap;
+    overflow: overlay;
+    .option_container {
+      width: 32%;
+      font-weight: 700;
+      font-size: 17px;
+      display: flex;
+      justify-content: space-between;
+      .Update_Task_Btn {
+        color: #00ff00;
+        cursor: pointer;
+      }
+      .is-completed-btn {
+        color: black;
+        cursor: pointer;
+      }
+      .dlt {
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .container,
+  .List-Form {
+    width: 100%;
+  }
+  .List-Form {
+    padding: 40px 10px;
+    form {
+      margin-top: 2rem !important;
+    }
+    .form-control {
+      width: 80%;
+    }
+    .btn {
+      width: 18%;
+    }
+  }
+  .Tasks {
+    padding: 10px;
+  }
+  .header {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 767px) {
+    input,
+    .Tasks {
+      .task {
+        .option_container {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .Tasks {
+    .task {
+      .option_container {
+        margin-top: 18px;
+      }
+    }
+  }
+  .alert {
+    right: 3%;
+    width: 94%;
+  }
+}
+@keyframes fadeAlert {
+  0% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}

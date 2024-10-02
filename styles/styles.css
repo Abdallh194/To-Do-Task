@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+  background-image: linear-gradient(to right, rgba(0, 81, 255, 0.8392156863), rgba(159, 135, 255, 0.7882352941));
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 920px;
+  margin: auto;
+  position: relative;
+}
+
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.d-none {
+  display: none;
+}
+
+.fade-totop {
+  animation-name: fadeAlert;
+  transition: 0.4s;
+  animation-duration: 1s;
+}
+
+.List-Form {
+  margin: 40px auto;
+  padding: 40px;
+}
+.List-Form .form-control {
+  height: 45px;
+  width: 85%;
+}
+.List-Form .btn {
+  width: 13%;
+}
+
+.header,
+.taskheader {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #a200ff;
+}
+
+.taskheader {
+  color: white;
+}
+
+.alert {
+  position: fixed;
+  width: 456px;
+  bottom: 0px;
+  right: 26px;
+}
+
+.Tasks,
+.List-Form {
+  background-color: white;
+  border-radius: 13px;
+}
+
+.Tasks {
+  padding: 1px 20px;
+  transition: 0.4s;
+}
+.Tasks .completed-Task {
+  cursor: no-drop !important;
+  background-image: linear-gradient(to right, rgba(0, 52, 169, 0.84), rgb(106, 91, 166)) !important;
+}
+.Tasks .task {
+  background-image: linear-gradient(to right, rgba(0, 81, 255, 0.8392156863), rgba(159, 135, 255, 0.7882352941));
+  color: white;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 19px;
+  font-weight: 600;
+  flex-wrap: wrap;
+  overflow: overlay;
+}
+.Tasks .task .option_container {
+  width: 32%;
+  font-weight: 700;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+}
+.Tasks .task .option_container .Update_Task_Btn {
+  color: #00ff00;
+  cursor: pointer;
+}
+.Tasks .task .option_container .is-completed-btn {
+  color: black;
+  cursor: pointer;
+}
+.Tasks .task .option_container .dlt {
+  color: red;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .container,
+  .List-Form {
+    width: 100%;
+  }
+  .List-Form {
+    padding: 40px 10px;
+  }
+  .List-Form form {
+    margin-top: 2rem !important;
+  }
+  .List-Form .form-control {
+    width: 80%;
+  }
+  .List-Form .btn {
+    width: 18%;
+  }
+  .Tasks {
+    padding: 10px;
+  }
+  .header {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 992px) and (max-width: 767px) {
+  input .task .option_container,
+  .Tasks .task .option_container {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .Tasks .task .option_container {
+    margin-top: 18px;
+  }
+  .alert {
+    right: 3%;
+    width: 94%;
+  }
+}
+@keyframes fadeAlert {
+  0% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}/*# sourceMappingURL=styles.css.map */
