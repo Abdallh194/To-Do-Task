@@ -18,6 +18,7 @@ input {
   background: none;
   font-weight: 700;
   font-size: 21px;
+  color: white;
 }
 .d-none {
   display: none;
@@ -122,6 +123,7 @@ input {
   .Tasks {
     padding: 10px;
   }
+  .taskheader,
   .header {
     font-size: 1.5rem;
   }
@@ -138,7 +140,21 @@ input {
   .Tasks {
     .task {
       .option_container {
-        margin-top: 18px;
+        padding-top: 10px;
+        margin-top: 16px;
+        width: 80%;
+        margin: 13px auto 0px auto;
+        font-size: 15px;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 120%;
+          height: 1px;
+          background-color: #ffffffc9;
+          top: -2px;
+          left: -10%;
+        }
       }
     }
   }

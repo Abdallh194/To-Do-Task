@@ -19,6 +19,7 @@ input {
   background: none;
   font-weight: 700;
   font-size: 21px;
+  color: white;
 }
 
 .d-none {
@@ -127,6 +128,7 @@ input {
   .Tasks {
     padding: 10px;
   }
+  .taskheader,
   .header {
     font-size: 1.5rem;
   }
@@ -139,7 +141,21 @@ input {
 }
 @media (max-width: 992px) {
   .Tasks .task .option_container {
-    margin-top: 18px;
+    padding-top: 10px;
+    margin-top: 16px;
+    width: 80%;
+    margin: 13px auto 0px auto;
+    font-size: 15px;
+    position: relative;
+  }
+  .Tasks .task .option_container::before {
+    position: absolute;
+    content: "";
+    width: 120%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.7882352941);
+    top: -2px;
+    left: -10%;
   }
   .alert {
     right: 3%;
